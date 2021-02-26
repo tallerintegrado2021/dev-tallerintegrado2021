@@ -1,3 +1,44 @@
-baseURL = "http://example.org/"
+baseURL = "" # MI DIRECCIÓN DE SITIO GITHUB.IO
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Nombre Apellido - MID 2021"
+themesDir = "./themes"
+theme = "template-tallerintegrado2021"
+
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+pygmentsUseClasses = true
+
+summaryLength = 30
+
+[[menu.main]]
+    name = "Inicio"
+    url = "/"
+    weight = 1
+
+[[menu.main]]
+    name = "Dococumentación"
+    url = "/docs/"
+    weight = 2
+
+[params]
+  google_analytics_id=""
+  homepage_button_link = '/docs'
+  homepage_button_text = 'Ir a Documentación'
+  homepage_intro = 'Repositorio Taller Integrado MID Universidad Adolfo Ibáñez 2021'
+  homepage_image = '/images/bg-home.png'
+
+
+  [params.homepage_meta_tags]
+    meta_description = "Hugo Whisper is a documentation theme built with Hugo."
+    meta_og_title = "Hugo Whisper Theme"
+    meta_og_type = "website"
+    meta_og_url = "https://hugo-whisper.netlify.app"
+    meta_og_image = "https://raw.githubusercontent.com/JugglerX/hugo-whisper-theme/master/images/tn.png"
+    meta_og_description = "Hugo Whisper is a documentation theme built with Hugo."
+    meta_twitter_card = "summary"
+    meta_twitter_site = "@zerostaticio"
+    meta_twitter_creator = "@zerostaticio"
+
+  [params.logo]
+      mobile = "/images/logo-mobile.svg"
+      standard  = "/images/logo.svg"
