@@ -5,7 +5,7 @@
     margin-bottom: 20px;
   }
   code {
-    background: #f5f5f5;
+    background: lighten($black, 20%);;
     padding: 3px 6px;
     border-radius: 3px;
     font-family: $font-family-mono;
@@ -109,7 +109,7 @@
     margin-bottom: 20px;
   }
   blockquote {
-    background: #f9f9f9;
+    background: lighten($black, 20%);
     border-left: 10px solid #ccc;
     margin: 1.5em 10px;
     padding: 0.5em 10px;

@@ -6653,7 +6653,8 @@ a.text-dark:hover, a.text-dark:focus {
 .table, .content table {
   width: 100%;
   margin-bottom: 1rem;
-  color: #212529; }
+  color: #fff;
+  background-color: #2a2a2a; }
   .table th, .content table th,
   .table td,
   .content table td {
@@ -6987,7 +6988,7 @@ a.text-dark:hover, a.text-dark:focus {
     transform: translate3d(0, -16px, 0) rotate(-90deg); }
 
 .highlight {
-  background: #f5f5f5; }
+  background: #5d5d5d; }
 
 .highlight .hll {
   background-color: #ffffcc; }
@@ -7630,7 +7631,7 @@ p {
     border-radius: 2px;
     margin-bottom: 20px; }
   .content code {
-    background: #f5f5f5;
+    background: #5d5d5d;
     padding: 3px 6px;
     border-radius: 3px;
     font-family: "Roboto Mono", monospace;
@@ -7716,7 +7717,7 @@ p {
     font-family: "Roboto", Arial, sans-serif, -apple-system;
     margin-bottom: 20px; }
   .content blockquote {
-    background: #f9f9f9;
+    background: #5d5d5d;
     border-left: 10px solid #ccc;
     margin: 1.5em 10px;
     padding: 0.5em 10px;
