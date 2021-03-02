@@ -148,7 +148,7 @@ Ejemplo con PDF en link externo:
 {{</* pdf-viewer id="ejemplo-adobe" link="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" */>}}
 ```
 
-##### Código `Visor de archivos PDF HTML Shortcode 
+##### Código `Visor de archivos PDF` HTML Shortcode 
 
 ```
 <iframe id='{{ index .Params "id" }}' src='{{ index .Params "link" }}'
