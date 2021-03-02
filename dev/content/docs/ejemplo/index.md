@@ -20,12 +20,12 @@ summary: Uso de los Shortcodes para agregar contenido en el sitio de documentaci
 
 ### Agregar Iframe de Fusion 360
 
-{{< iframe-fusion >}}
+{{< iframe-fusion link="https://myhub.autodesk360.com/ue2ce4e3a/shares/public/SH56a43QTfd62c1cd968edbffd1ceafd2764?mode=embed" >}}
 
 ##### Código `Iframe de Fusion 360` Markdown 
 
 ```
-{{</* iframe-fusion */>}}
+{{</* iframe-fusion link="https://myhub.autodesk360.com/ue2ce4e3a/shares/public/SH56a43QTfd62c1cd968edbffd1ceafd2764?mode=embed" */>}}
 ```
 
 ##### Código `Iframe de Fusion 360` HTML Shortcode 
@@ -33,7 +33,7 @@ summary: Uso de los Shortcodes para agregar contenido en el sitio de documentaci
 ```
 <div>
     <iframe 
-    src="https://myhub.autodesk360.com/ue2ce4e3a/shares/public/SH56a43QTfd62c1cd968edbffd1ceafd2764?mode=embed" 
+    src='{{ index .Params "link" }}'
     width="100%" 
     height="450" 
     allowfullscreen="true" 
@@ -54,6 +54,8 @@ summary: Uso de los Shortcodes para agregar contenido en el sitio de documentaci
 {{< video-local src="video.mp4" >}}
 
 ##### Código `Video Local MP4` Markdown 
+
+Carpeta de videos se encuentra en `/static/img`
 
 ```
 {{</* video-local src="video.mp4" */>}}
@@ -82,6 +84,10 @@ summary: Uso de los Shortcodes para agregar contenido en el sitio de documentaci
 {{< gallery dir="/img/galeria/" />}} {{< load-photoswipe >}}
 
 ##### Código `Galería Fotos Lightbox` Markdown 
+
+Carpeta de galeria se encuentra en `/static/img`. Es importante que cada galería de imágenes esté contenida en una carpeta.
+
+Para acceder a esa carpeta, se debe poner la ruta de acceso en el shortcode. Ejemplo con una carpeta llamada `galeria` dentro de `/static/img`.
 
 ```
 {{</* gallery dir="/img/galeria/" />}} {{< load-photoswipe */>}}
@@ -117,4 +123,48 @@ summary: Uso de los Shortcodes para agregar contenido en el sitio de documentaci
 ```
 
 [[Volver Arriba]](#contenido-shortcodes)
- 
+
+<!-- Agregar visor de archivos PDF -->
+---
+
+### Agregar visor de archivos PDF
+
+{{< pdf-viewer id="pdf-hugo" link="/pdf/documento.pdf"  >}}
+
+{{< pdf-viewer id="ejemplo-adobe" link="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"  >}}
+
+##### Código `Visor de archivos PDF` Markdown 
+
+Ejemplo con PDF en carpeta `/static/pdf`.
+
+```
+{{</* pdf-viewer id="pdf-hugo" link="/pdf/documento.pdf" */>}}
+```
+
+Ejemplo con PDF en link externo:
+
+```
+{{</* pdf-viewer id="ejemplo-adobe" link="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" */>}}
+```
+
+##### Código `Visor de archivos PDF HTML Shortcode 
+
+```
+<iframe id='{{ index .Params "id" }}' src='{{ index .Params "link" }}'
+frameborder="0" scrolling="yes" seamless="seamless" style="display:block; width:100%; height:60vh;"></iframe>
+
+<button onclick="myFunction('{{ index .Params "id" }}')" class="button button-primary mb-2" style="width: 100%;">Ver Pantalla Completa</button>
+
+<script>
+    function myFunction(id) {
+      document.getElementById(id).classList.add("full-screen");
+    }
+    document.addEventListener('keydown', function(event){
+	if(event.key === "Escape"){
+        document.getElementById('{{ index .Params "id" }}').classList.remove("full-screen");
+	}
+});
+</script>
+```
+
+

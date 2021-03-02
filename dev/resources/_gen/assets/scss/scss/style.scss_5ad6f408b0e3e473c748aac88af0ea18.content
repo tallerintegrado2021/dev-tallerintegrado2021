@@ -7866,4 +7866,12 @@ body {
   padding-left: 20px;
   padding-right: 20px; }
 
+.full-screen {
+  overflow: hidden;
+  height: 100vh !important;
+  width: 100vw !important;
+  position: fixed;
+  top: 0;
+  left: 0; }
+
 /*# sourceMappingURL=style.css.map */
