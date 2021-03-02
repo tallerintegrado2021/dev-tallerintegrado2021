@@ -14,6 +14,7 @@ summary: Uso de los Shortcodes para agregar contenido en el sitio de documentaci
 - [Agregar Video Local MP4](#agregar-video-local-mp4)
 - [Galería Fotos Lightbox](#agregar-galería-fotos-lightbox)
 - [Botón de Descarga](#agregar-botón-de-descarga)
+- [Agregar Visor de PDF](#agregar-visor-de-archivos-pdf)
 
 <!-- Agregar Iframe de Fusion 360 -->
 ---
